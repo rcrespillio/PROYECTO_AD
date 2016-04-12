@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<meta name="viewport"
+       content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>REGISTRACION</title>
+
+        <!-- Bootstrap core CSS -->
+        <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet"></link>   <!-- No se porque no renderiza bien si se saca el </link>, no sacar -->
+         <link type="text/css" href="js/bootstrap.min.js" rel="stylesheet"></link>
+		 <script src="js/jquery-1.12.3.min.js"></script>
+<style type="text/css">
+.modal-footer {
+       border-top: 0px;
+}
+</style>
+
+
+
+
+</head>
+
+
+<body>
+
+       
+       <div id="loginModal">
+              <div class="modal-dialog">
+                     <div class="modal-content">
+                          
+                          
+                           <div class="modal-header">
+                                  <h2>POR FAVOR REGISTRESE</h2>
+                           </div>
+                          
+                          
+                           <div class="modal-body">
+                                  <form class="form col-md-12" id ="myform" name="form" method="post"  action="validar" onsubmit="return(validate());" >
+
+                                         <input type="text" name="apodo" id="apodo" class="form-control input-lg" placeholder="apodo" required autofocus onkeyup="validarUsuario(this);" />
+                                          <span id="spanRespuesta"></span>
+                                         <input type="text" id ="email" name="email" class="form-control input-lg" placeholder="email" required autofocus />
+                                          <span id="emailcheck"></span>
+                                         <input type="password" name="password" class="form-control input-lg" placeholder="contraseña" required />
+                                         
+                                          <input type="password" name="repeatpassword" class="form-control input-lg" placeholder="repetir contraseña" required />
+                                        <span id="passwordcheck"></span>
+                                         
+                                       <button class="btn btn-primary btn-lg btn-block"   >GO !</button>
+                                  </form>
+                           </div>
+                          
+                           
+                   
+                          
+                          
+                          
+          <script>
+            var ajaxRequest; 
+            function ajaxFunction(){
+             try{
+               // Código para la mayoría de los browsers
+               ajaxRequest = new XMLHttpRequest();
+             }catch (e){
+               // Código exclusivo para Internet Explorer
+               try{
+                  ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+               }catch (e) {
+                  try{
+                     ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                  }catch (e){
+                     // Algo falló!
+                     alert("Error!");
+                     return false;
+                  }
+               }
+             }
+            }
+            
+            function validarUsuario(target) {
+               ajaxFunction();
+               
+               ajaxRequest.onreadystatechange = processRequest;
+               if (!target)
+                target = document.getElementById("apodo");
+               var url = "validar?id=" + escape(target.value);
+               ajaxRequest.open("GET", url, true);
+               ajaxRequest.send(null);
+            }
+            
+            function processRequest() {
+              if (ajaxRequest.readyState===4 && ajaxRequest.status===200){
+                var message = ajaxRequest.responseText;
+                if ("true" === message) {
+                    document.getElementById("spanRespuesta").style.color = "red";
+                    document.getElementById("spanRespuesta").innerHTML = "Ese nombre de usuario ya existe";
+                } else {
+                    document.getElementById("spanRespuesta").style.color = "green";
+                    document.getElementById("spanRespuesta").innerHTML= "Nombre de usuario disponible";
+                }
+                
+              }
+            }
+
+        </script>
+        
+        
+        
+        
+        
+     <script type="text/javascript">
+   
+      function validate()
+      {
+      
+         
+        var clave1 = document.form.repeatpassword.value
+ 	   	var clave2 = document.form.password.value 
+
+ 	   	if (clave1 == clave2){ 
+ 	      	
+ 	      	document.getElementById("passwordcheck").innerHTML = "";
+ 	   	}else {
+ 	   	   document.getElementById("passwordcheck").style.color = "red";
+          document.getElementById("passwordcheck").innerHTML = "Las contraseñas no coinciden"; 
+          return false;
+ 	   	}
+         
+         var email = document.form.email.value 
+         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         if (!re.test(email)){
+         document.getElementById("emailcheck").style.color = "red";
+         document.getElementById("emailcheck").innerHTML = "Ingrese un email valido"; 
+          
+         return false;
+         }else{
+        	 document.getElementById("emailcheck").innerHTML = ""; 
+         }
+          
+         if( document.getElementById("spanRespuesta").innerHTML!="Nombre de usuario disponible"){
+        	 
+        	// se debe realizar una validacion del lado del servidor tambien!!!!!!
+        	 
+        	return false;
+         }
+         
+         
+         
+         return( true );
+      }
+   
+     </script>
+                           
+                           
+                           
+                           
+                           
+                           <div class="modal-footer">
+                                  <div class="col-md-12">
+                                         <span class="pull-left"><a href="#">Forgot Password?</a></span>
+                                         <span><a href="login.html">Log in!</a></span>
+                                  </div>
+                           </div>
+                     </div>
+              </div>
+       </div>
+
+      
+</body>
+</html>

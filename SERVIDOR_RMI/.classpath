@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="appClientModule"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="src" path="/REPO"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/javassist-3.4.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/jtds-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Desktop/UADE/Aplicaciones Distribuidas/parciales-finales/TP_2015/Final_1C_2014/lib/slf4j-simple-1.5.6.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
